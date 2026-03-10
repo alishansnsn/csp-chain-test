@@ -1,0 +1,21 @@
+h1. Textile XSS Test
+
+Normal textile text.
+
+<notextile>
+<img src=x onerror="alert('textile-xss')">
+</notextile>
+
+notextile. <svg onload="alert('textile-svg')">
+
+"evil link":javascript:alert('textile-href')
+
+!http://x.com/img.jpg(test" onerror="alert('textile-img'))!
+
+<notextile>
+<script>alert('textile-script')</script>
+</notextile>
+
+<notextile>
+<details open><summary>test</summary><img src=x onerror="alert('detail-xss')"></details>
+</notextile>

